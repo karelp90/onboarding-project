@@ -1,0 +1,49 @@
+<aura:component>
+    <aura:attribute name="posts" type="Post__c[]" />
+    <div class="slds-col slds-col_rule-right slds-p-right_large slds-size_12-of-12">
+        <article class="slds-card">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media--center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <lightning:icon iconName="standard:article" alternativeText="Posts" />
+                    </div>
+                    <div class="slds-media__body slds-truncate">
+                        <a href="javascript:void(0);" class="slds-text-link--reset">
+                            <span class="slds-text-heading_small">Posts</span>
+                        </a>
+                    </div>
+                </header>
+            </div>
+            <!-- CARD BODY = TABLE -->
+            <div class="slds-card__body">
+                <table class="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+                    <thead>
+                        <tr class="slds-text-heading--label">
+                            <th class="slds-size_1-of-12" scope="col">No.</th>
+                            <th class="slds-size_1-of-4" scope="col">Title</th>
+                            <th class="slds-size_1-of-4" scope="col">Writer</th>
+                            <th class="slds-size_1-of-4" scope="col">Published Date</th>
+                            <th class="slds-size_1-of-4" scope="col">Status</th>
+                            <th class="slds-size_1-of-4" scope="col">Tags</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--    post’s Title, Writer, Published Date, Status and Labels -->
+                        <aura:iteration items="{!v.posts}" var="item" indexVar="index">
+                            <tr class="slds-hint-parent">
+                                <td class="slds-size_1-of-12">{!index+1}</td>
+                                <th class="slds-size_1-of-4" scope="row">{!item.Name}</th>
+                                <td class="slds-size_1-of-4">{!item.Writer__r.Name}</td>
+                                <td class="slds-size_1-of-4">
+                                    <lightning:formattedDateTime value="{!item.Published_Date__c}" timeZone="Europe/Berlin" />
+                                </td>
+                                <td class="slds-size_1-of-4">{!item.Status__c}</td>
+                                <td class="slds-size_1-of-4">{!item.Tags__c}</td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    </div>
+</aura:component>

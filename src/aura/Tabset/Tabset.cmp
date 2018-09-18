@@ -1,0 +1,6 @@
+<aura:component>
+    <lightning:tabset variant="scoped">
+        <c:WriterTab></c:WriterTab>
+        <c:PostTab></c:PostTab>
+    </lightning:tabset>
+</aura:component>

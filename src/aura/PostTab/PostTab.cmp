@@ -1,0 +1,13 @@
+<aura:component controller="PostController">
+    <aura:attribute name="posts" type="Post__c[]" />
+    <lightning:tab label="Posts" title="Posts Information" onactive="{!c.handleActive }">
+        
+        <c:header labelHeader="Posts" itemCount="{!v.posts.length}"></c:header>
+        <lightning:layout>
+            <lightning:layoutItem padding="around-small" size="12">
+                <c:postsList posts="{!v.posts}"></c:postsList>
+            </lightning:layoutItem>
+        </lightning:layout>
+
+    </lightning:tab>
+</aura:component>

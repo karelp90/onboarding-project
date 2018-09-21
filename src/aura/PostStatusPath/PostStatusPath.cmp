@@ -1,0 +1,55 @@
+<aura:component>
+    <aura:attribute name="current" type="String" />
+    <aura:handler name="render" value="{!this}" action="{!c.onRender}" />
+    <article class="slds-card">
+        <div class="slds-path">
+            <div class="slds-grid slds-path__track">
+                <div class="slds-grid slds-path__scroller-container">
+                    <div class="slds-path__scroller" role="application">
+                        <div class="slds-path__scroller_inner">
+                            <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal">
+                                <li aura:id="Draft" class="slds-path__item slds-is-incomplete" role="presentation">
+                                    <a aria-selected="true" class="slds-path__link" href="javascript:void(0);" id="path-1"
+                                        role="option" tabindex="0">
+                                        <span class="slds-path__stage">
+                                            <lightning:icon iconName="utility:check" size="xx-small" />
+                                            <span class="slds-assistive-text">Current Stage:</span>
+                                        </span>
+                                        <span class="slds-path__title">Draft</span>
+                                    </a>
+                                </li>
+                                <li aura:id="Under Review" class="slds-path__item slds-is-incomplete" role="presentation">
+                                    <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-2"
+                                        role="option" tabindex="-1">
+                                        <span class="slds-path__stage">
+                                            <lightning:icon iconName="utility:check" size="xx-small" />
+                                        </span>
+                                        <span class="slds-path__title">Under Review</span>
+                                    </a>
+                                </li>
+                                <li aura:id="Ready" class="slds-path__item slds-is-incomplete" role="presentation">
+                                    <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-3"
+                                        role="option" tabindex="-1">
+                                        <span class="slds-path__stage">
+                                            <lightning:icon iconName="utility:check" size="xx-small" />
+                                        </span>
+                                        <span class="slds-path__title">Ready</span>
+                                    </a>
+                                </li>
+                                <li aura:id="Published" class="slds-path__item slds-is-incomplete" role="presentation">
+                                    <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-4"
+                                        role="option" tabindex="-1">
+                                        <span class="slds-path__stage">
+                                            <lightning:icon iconName="utility:check" size="xx-small" />
+                                        </span>
+                                        <span class="slds-path__title">Published</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</aura:component>

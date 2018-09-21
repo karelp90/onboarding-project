@@ -15,9 +15,11 @@
         "ApprovalProcess",
         "AuraDefinitionBundle",
         "CustomObject",
+        "CustomTab",
         "EmailTemplate",
         "Flow",
         "FlowDefinition",
+        "PathAssistant",
         "StaticResource",
         "Workflow"
     ]

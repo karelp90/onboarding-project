@@ -20,9 +20,11 @@
                 <div class="slds-col slds-size_6-of-12">
                     <div aria-labelledby="newproductform">
                         <form class="slds-form--stacked">
-                            <lightning:textarea name="postcontent" aura:id="postform" label="Content Post Editor"
-                                required="true" onchange="{!c.handleSaveRecord}" value="{!v.simpleRecord.Content__c}"
-                                placeholder="type here..." messageWhenValueMissing="An empty content cannot be saved." />
+                            <span onkeypress="{!c.handleKeyShortCut}">
+                                <lightning:textarea name="postcontent" aura:id="postform" label="Content Post Editor"
+                                    required="true" onchange="{!c.handleSaveRecord}" value="{!v.simpleRecord.Content__c}"
+                                    placeholder="type here..." messageWhenValueMissing="An empty content cannot be saved." />
+                            </span>
                         </form>
                     </div>
 

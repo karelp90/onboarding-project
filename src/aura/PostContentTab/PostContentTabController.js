@@ -3,6 +3,9 @@
 		if (component.get('v.simpleRecord') != undefined)
 			component.set('v.markDownText', helper.formatterTextMarkdown(component.get('v.simpleRecord').Content__c));
 	},
+	handleKeyShortCut: function (component, event, helper) {
+		helper.keyShortCut(component, event);
+	},
 	handleSaveRecord: function (component, event, helper) {
 		helper.saveContentAuto(component);
 	},

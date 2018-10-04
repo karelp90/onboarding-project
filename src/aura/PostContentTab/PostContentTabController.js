@@ -1,6 +1,6 @@
 ({
 	onRender: function (component, event, helper) {
-		if (component.get('v.simpleRecord') != undefined)
+		if (component.get('v.simpleRecord') != 'undefined')
 			component.set('v.markDownText', helper.formatterTextMarkdown(component.get('v.simpleRecord').Content__c));
 	},
 	handleSaveRecord: function (component, event, helper) {
